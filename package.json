@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Console application to get weather based on location",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatihint/weather-app.git"
+  },
+  "author": "fatihint",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fatihint/weather-app/issues"
+  },
+  "homepage": "https://github.com/fatihint/weather-app#readme",
+  "dependencies": {
+    "request": "^2.88.0",
+    "yargs": "^12.0.2"
+  }
+}
