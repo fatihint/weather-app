@@ -14,6 +14,7 @@ const args = yargs
             'u': {
                 alias: 'unit',
                 describe: 'Unit that you wish to use',
+                choices: ['F', 'C', 'K'],
                 default: 'C'
             }
         })
@@ -35,4 +36,3 @@ geocode.geocodeAddress(args.address, (errorMessage, result) => {
         })
     }
 })
-

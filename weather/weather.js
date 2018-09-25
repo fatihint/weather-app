@@ -1,5 +1,27 @@
 const request = require('request')
 
+var convert = (temperature, unit) => {
+    switch (unit) {
+        case 'F':
+            return temperature
+            break;
+        case 'C':
+            return convertToCelcius(temperature)
+            break;
+        case 'K':
+            return convertToKelvin(temperature)
+            break;
+    }
+}
+
+var convertToCelcius = (temperature) => {
+    return (temperature - 32) / 1.8
+}
+
+var convertToKelvin = (temperature) => {
+    return (temperature + 459.67) * (5/9)
+}
+
 var getWeather = (lat, lng, unit, callback) => {
     request({
         url: `https://api.darksky.net/forecast/bcaf6ec56028331d27a2b7a32b4dcece/${lat},${lng}`,
